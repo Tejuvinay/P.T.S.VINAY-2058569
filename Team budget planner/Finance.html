@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Financial Teams</title>
+	<link rel="stylesheet" type="text/css" href="Stylesheet.css" />
+	<link rel="html" type="text/css" href="pm.html" />
+	
+
+</head>
+<body>
+
+	<div>
+		<h3>Financial Teams</h3>
+	</div>
+	<div style=" font-size: 30px;  color: rgb(32, 7, 63); text-align: center;">
+		<div style="font-size: 40px; color: red; margin: 0 auto;">
+			Details of clinet
+		</div>
+		<div id="main">
+		</div>
+	</div>
+
+
+
+
+
+
+	<p><a href="homepage.html">Back</a></p>
+
+	<script>
+		let total = 0;
+
+		let empparse = localStorage.getItem("empobj");
+		let empjason = JSON.parse(empparse);
+
+		console.log(empjason);
+		var tableContent = ""
+		var startTable = "<table border=1><tr><th>Client Name</th><th>Project Name </th><th>Budget</th></tr>"
+		for (let i = 0; i < empjason.length; i++) {
+
+			tableContent += "<tr><td>" + empjason[i].clientname + "</td><td>" + empjason[i].projectname + "</td><td>" + empjason[i].budget + "</td></tr>"
+			total = total + parseInt(empjason[i].budget);
+		}
+		var tot = " Total budget for above table :" + total;
+		var endTable = "</table>"
+		tableContent = startTable + tableContent + endTable + tot
+		document.getElementById("main").innerHTML = tableContent;
+	</script>
+	<script src="Budget.js">
+
+	</script>
+
+
+
+
+
+
+</body>
+</html>
