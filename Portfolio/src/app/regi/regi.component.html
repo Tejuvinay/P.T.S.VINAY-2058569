@@ -1,0 +1,45 @@
+<p>regi works!</p>
+<div *ngIf="f2">
+  <h2> Sign-up for  Portfolio account </h2>
+  <form #loginRef>
+    <label>First name</label>
+    <input type="text" name="ser" #first/><br/>
+    <label>Lastname</label>
+    <input type="text" name="ur" #re><br />
+    <label>Username</label>
+    <input type="text" name="user" #reference><br />
+    <label>Password</label>
+    <input type="password" name="pass" #nameref><br />
+    <input type="button" value="submit" (click)="changevalue(reference,nameref,first,re)" />
+
+  </form>
+</div>
+<div *ngIf="f1">
+  <h1>Enter your credentials </h1>
+  <form #loginRef>
+    <label>Username</label>
+    <input type="text" name="users" #ref><br />
+    <label>Password</label>
+    <input type="password" name="passes" #Ref><br />
+    <input type="button" value="Login" (click)="fun(ref,Ref)">
+  </form>
+</div>
+<div *ngIf=f3>
+ <h2> Welcome to Portfolio page {{lname}}</h2>   <br/>
+  Contact name <input type="text" name="cname" #cna><br />
+  Phone number <input type="text" name="pum" #pnas><br />
+  <input type="button" value="submit" (click)="Detail(cna,pnas)" />
+
+
+  <table border="4">
+    <tr>
+      <th>Contact Name</th>
+      <th>Phone number</th>
+    </tr>
+    <tr *ngFor="let emp of employee">
+      <td>{{emp.Name}}</td>
+      <td>{{emp.phonenumber}}</td>
+
+    </tr>
+  </table>
+</div>
