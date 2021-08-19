@@ -1,0 +1,36 @@
+body {
+    background-color: lavenderblush;
+}
+
+
+.a1 {
+    text-align: center;
+}
+
+ul {
+    float:right;
+    color:red;
+    font-size:x-large;
+}
+
+h2 {
+    text-align: center;
+    color: firebrick;
+}
+
+p {
+    color: dodgerblue;
+    text-align: left;
+    font-size: x-large;
+}
+
+#ch {
+    float: right;
+    font-size: larger;
+    color: red;
+}
+table{
+
+
+   
+}
